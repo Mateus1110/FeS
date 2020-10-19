@@ -1,0 +1,18 @@
+.content-sobre{
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.content-sobre h1{
+    text-align: center;
+    color: yellow;
+}
+
+.content-sobre p{
+    width: 50%;
+    margin: auto auto;
+    margin-top: 3rem;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,13 @@
+ 
+  .menu-item{
+    font-family: var(--primary-font);
+    color: white;
+    opacity: .5;
+    cursor: pointer;
+    transition: .2s;
+  }
+  
+  .menu-item:hover{
+    opacity: 1;
+    font-size: larger;
+  }

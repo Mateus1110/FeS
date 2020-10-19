@@ -1,15 +1,16 @@
 import React from 'react'
+import MenuItem from './menu-item'
 
 export default function Menu(){
     return(
         <div className='menu-area'>
-            <h4>Categorias</h4>
-            <h4>Filmes</h4>
-            <h4>Séries</h4>
-            <h4>Lançamentos</h4>
-            <h4>Populares</h4>
-            <h4>Favoritos</h4>
-            <h4>Sobre</h4>
+            <MenuItem text='Categorias' to='categorias'/>
+            <MenuItem text='Filmes' to='filmes'/>
+            <MenuItem text='Séries' to='series'/>
+            <MenuItem text='Lançamentos' to='lancamentos'/>
+            <MenuItem text='Populares' to='populares'/>
+            <MenuItem text='Favoritos' to='favoritos'/>
+            <MenuItem text='Sobre' to='sobre'/>
         </div>
-    )
+     )
 }

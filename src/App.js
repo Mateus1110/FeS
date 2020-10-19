@@ -1,22 +1,22 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './App.css';
 
 import Header from './Componentes/Header/header';
-import Menu from './Componentes/Menu/menu';
-import Card from './Componentes/Card/card'
+import Lancamentos from './Paginas/Lancamentos/lancamentos'
+import Sobre from './Paginas/Sobre/sobre'
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Menu/>
-      <main>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-      </main>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path='/' component={Lancamentos}/>
+            <Route path='/lancamentos' component={Lancamentos}></Route>
+            <Route path='/sobre' component={Sobre}/>
+          </Switch>
+        </BrowserRouter>
     </div>
   );
 }
