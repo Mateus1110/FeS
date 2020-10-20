@@ -1,18 +1,22 @@
 import React from 'react'
 import './card.css'
 
-export default function Card(){
+export default function Card({ serie }){
+    const imgUrl = 'https://image.tmdb.org/t/p/w200/';
+    const data = new Date(serie.first_air_date);
+    const dataLancamento = data.toLocaleDateString()
+
     return(
         <div className='card'>
             <div className='card-image'>
-                <img src="https://www.emaisgoias.com.br/wp-content/uploads/2020/03/Vi%C3%BAva-Negra-Marvel-divulga-trailer-final-e-novo-p%C3%B4ster-620x450.jpg" alt=''/>
-            </div>
+                <img src={imgUrl + serie.poster_path} alt=''></img>
+            </div>  
             <div className='card-content'>
-                <h4>Viúva negra</h4>
-                <p>2020</p>
+                <h4>{serie.name}</h4>
+                <p>{dataLancamento}</p>
                 <div className='rate'>
                     <span className='material-icons'>star_rate</span>
-                    8.5
+                    {serie.vote_average}
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path='/' component={Lancamentos}/>
-            <Route path='/lancamentos' component={Lancamentos}></Route>
+            <Route path='/lancamentos' component={Lancamentos}/>
             <Route path='/sobre' component={Sobre}/>
           </Switch>
         </BrowserRouter>
