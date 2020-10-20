@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import './sobre.css'
 
-import Menu from '../../Componentes/Menu/menu'
+import Menu from '../../componentes/menu/menu'
 
 export default function Sobre(){
     return(

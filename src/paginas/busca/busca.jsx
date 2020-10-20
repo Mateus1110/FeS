@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import axios from 'axios'
 
-import Menu from '../../Componentes/Menu/menu'
-import Card from '../../Componentes/Card/card'
+import Menu from '../../componentes/menu/menu'
+import Card from '../../componentes/card/card'
 
 export default function Busca(props){
     const urlAPI = 'https://api.themoviedb.org/3/search/tv?api_key=37c1e287635864c0e5a45148db178cc4&language=pt-BR&page=1&' + props.location.search.substring(1)

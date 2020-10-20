@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import axios from 'axios'
 
-import Menu from '../../Componentes/Menu/menu'
-import Card from '../../Componentes/Card/card'
+import Menu from '../../componentes/menu/menu'
+import Card from '../../componentes/card/card'
 
 export default function Lancamentos(){
     
