@@ -5,6 +5,7 @@ import './App.css';
 import Header from './componentes/header/Header'
 import Lancamentos from './paginas/lancamentos/Lancamentos'
 import Busca from './paginas/busca/Busca'
+import Populares from './paginas/populares/Populares'
 import Sobre from './paginas/sobre/Sobre'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route exact path='/' component={Lancamentos}/>
             <Route path='/lancamentos' component={Lancamentos}/>
             <Route path='/busca' component={Busca}/>
+            <Route path='/populares' component={Populares}/>
             <Route path='/sobre' component={Sobre}/>
           </Switch>
         </BrowserRouter>

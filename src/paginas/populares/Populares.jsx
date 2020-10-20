@@ -5,7 +5,7 @@ import axios from 'axios'
 import Menu from '../../componentes/menu/Menu'
 import Card from '../../componentes/card/Card'
 
-export default function Lancamentos(){
+export default function Populares(){
     
     const [series, setSeries] = useState([]);
 
@@ -13,7 +13,7 @@ export default function Lancamentos(){
 
     async function load(){
         try{
-            const resposta = await axios.get('https://api.themoviedb.org/3/tv/airing_today', api_options());
+            const resposta = await axios.get('https://api.themoviedb.org/3/tv/popular', api_options());
             setSeries(resposta.data.results);
         }catch(erro){
             console.log(erro);
