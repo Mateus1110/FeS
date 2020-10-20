@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {withRouter} from 'react-router-dom'
 import './header.css'
 
-export default function Header(){
+function Header(props){
+    
+    const [search, setSearch] = useState('');
+
+    function buscar(event){
+        event.preventDefault()
+        props.history.push('/busca?query=' + search);
+    }
+
     return(
         <header>
             <span className="material-icons home">home</span>
             <label className='label-header'>Filmes e Séries</label>
-            <input className='input-header' placeholder='Busque por uma série ou filme'></input>
+            <form onSubmit={buscar} action="" onChange={(evento) => setSearch(evento.target.value)}>
+                <input className='input-header' name='query' id='query' placeholder='Busque por uma série ou filme'></input>
+                <button id='search-button' type='submit'>Buscar</button>
+            </form>
         </header>
     )
 }
+
+export default withRouter(Header)

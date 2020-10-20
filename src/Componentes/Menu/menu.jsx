@@ -10,6 +10,7 @@ export default function Menu(){
             <MenuItem text='Lançamentos' to='lancamentos'/>
             <MenuItem text='Populares' to='populares'/>
             <MenuItem text='Favoritos' to='favoritos'/>
+            <MenuItem text='Busca' to='busca'/>
             <MenuItem text='Sobre' to='sobre'/>
         </div>
      )
