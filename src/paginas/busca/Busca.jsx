@@ -4,15 +4,15 @@ import axios from 'axios'
 import Menu from '../../componentes/menu/Menu'
 import Card from '../../componentes/card/Card'
 
-export default function Lancamentos(){
-    
+export default function Busca(props){
+    const urlAPI = 'https://api.themoviedb.org/3/search/tv?api_key=37c1e287635864c0e5a45148db178cc4&language=pt-BR&page=1&' + props.location.search.substring(1)
     const [series, setSeries] = useState([]);
 
-    useEffect(() => { load() }, [])
+    useEffect(() => { load() }, [props.location.search])
 
     async function load(){
         try{
-            const resposta = await axios.get('https://api.themoviedb.org/3/tv/airing_today?api_key=37c1e287635864c0e5a45148db178cc4&Language=pt-BR');
+            const resposta = await axios.get(urlAPI);
             setSeries(resposta.data.results);
         }catch(erro){
             console.log(erro);
