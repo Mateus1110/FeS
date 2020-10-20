@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {withRouter} from 'react-router-dom'
-import './header.css'
+import './Header.css'
 
 function Header(props){
     

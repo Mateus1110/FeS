@@ -1,5 +1,5 @@
 import React from 'react'
-import './card.css'
+import './Card.css'
 
 export default function Card({ serie }){
     const imgUrl = 'https://image.tmdb.org/t/p/w200/';
