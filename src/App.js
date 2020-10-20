@@ -2,10 +2,10 @@ import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './App.css';
 
-import Header from './components/header/Header'
-import Lancamentos from './pages/lancamentos/Lancamentos'
-import Busca from './pages/busca/Busca'
-import Sobre from './pages/sobre/Sobre'
+import Header from './componentes/header/Header'
+import Lancamentos from './paginas/lancamentos/Lancamentos'
+import Busca from './paginas/busca/Busca'
+import Sobre from './paginas/sobre/Sobre'
 
 function App() {
   return (
