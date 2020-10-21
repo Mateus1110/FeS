@@ -6,7 +6,7 @@ export default function Menu(){
         <div className='menu-area'>
             <MenuItem text='Categorias' to='categorias'/>
             <MenuItem text='Filmes' to='filmes'/>
-            <MenuItem text='Séries' to='series'/>
+            <MenuItem text='Melhor avaliados' to='avaliados'/>
             <MenuItem text='Lançamentos' to='lancamentos'/>
             <MenuItem text='Populares' to='populares'/>
             <MenuItem text='Favoritos' to='favoritos'/>

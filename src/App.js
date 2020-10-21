@@ -6,6 +6,7 @@ import Header from './componentes/header/Header'
 import Lancamentos from './paginas/lancamentos/Lancamentos'
 import Busca from './paginas/busca/Busca'
 import Populares from './paginas/populares/Populares'
+import Avaliados from './paginas/avaliados/Avaliados'
 import Sobre from './paginas/sobre/Sobre'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path='/lancamentos' component={Lancamentos}/>
             <Route path='/busca' component={Busca}/>
             <Route path='/populares' component={Populares}/>
+            <Route path='/avaliados' component={Avaliados}/>
             <Route path='/sobre' component={Sobre}/>
           </Switch>
         </BrowserRouter>

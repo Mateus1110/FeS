@@ -4,7 +4,7 @@ import './Card.css'
 export default function Card({ serie }){
     const imgUrl = 'https://image.tmdb.org/t/p/w200/';
     const data = new Date(serie.first_air_date);
-    const dataLancamento = data.toLocaleDateString()
+    const dataLancamento = data.getFullYear()
 
     return(
         <div className='card'>
