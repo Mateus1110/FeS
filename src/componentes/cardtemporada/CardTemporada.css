@@ -1,0 +1,34 @@
+.card-temporada{
+    margin-top: 2rem;
+    width: 80%;
+    display: flex;
+}
+
+.card-temporada img{
+    width: 8rem;
+    height: 10rem;
+    border-radius: 10px;
+}
+
+.card-info{
+    margin-left: 2rem;
+}
+
+.card-temporada h2{
+    font-size: large;
+    font-family: var(--primary-font);
+    color: white;
+}
+
+.card-temporada h3{
+    font-family: var(--secondary-font);
+    margin-top: 1rem;
+    color: darkgrey;
+}
+
+.card-temporada p{
+    font-family: var(--secondary-font);
+    margin-top: 1rem;
+    color: darkgray;
+    text-align: justify;
+}

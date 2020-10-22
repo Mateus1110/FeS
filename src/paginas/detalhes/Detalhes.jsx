@@ -3,6 +3,7 @@ import './Detalhes.css'
 
 import api_options from '../../dados/api' 
 import axios from 'axios'
+import CardTemporada from '../../componentes/cardtemporada/CardTemporada'
 
 export default function Detalhes(props){
     const { serieId }= props.match.params
@@ -10,6 +11,7 @@ export default function Detalhes(props){
     const baseBgImgUrl = 'https://image.tmdb.org/t/p/original/'
     const [serie, setSerie] = useState([]);
     const [generos, setGeneros] = useState([]);
+    const [temporadas, setTemporadas] = useState([]);
 
     useEffect(() => { load() }, [])
 
@@ -18,6 +20,7 @@ export default function Detalhes(props){
             const serie = await axios.get(`https://api.themoviedb.org/3/tv/${serieId}`, api_options());
             setSerie(serie.data);
             setGeneros(serie.data.genres);
+            setTemporadas(serie.data.seasons);
         }catch(erro){
             console.log(erro);
         }
@@ -44,6 +47,10 @@ export default function Detalhes(props){
                     <p className='description'>{serie.overview}</p>
                 </div>
             </div>
+            <section className='temporadas'>
+                <h1>Temporadas</h1>
+                {temporadas.map((temporada) => <CardTemporada temporada={temporada}/>)}
+            </section>
         </Fragment>
     )
 }
