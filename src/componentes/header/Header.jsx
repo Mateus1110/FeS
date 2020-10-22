@@ -12,8 +12,8 @@ function Header(props){
     }
 
     return(
-        <header>
-            <span className="material-icons home">home</span>
+        <header id='home'>
+            <a href="#home"><span className="material-icons home">home</span></a>
             <label className='label-header'>Filmes e Séries</label>
             <form onSubmit={buscar} action="" onChange={(evento) => setSearch(evento.target.value)}>
                 <input className='input-header' name='query' id='query' placeholder='Busque por uma série ou filme'></input>

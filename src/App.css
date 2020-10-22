@@ -16,8 +16,9 @@ html, body{
   margin: 0;
 }
 
-h1, h2, h3, h4, p{
+h1, h2, h3, h4, p, ul, li{
   margin: 0;
+  padding: 0;
 }
 
 a{
@@ -35,7 +36,7 @@ a{
   background-color: black;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .content{

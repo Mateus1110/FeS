@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './Card.css'
 
 export default function Card({ serie }){
@@ -8,17 +9,19 @@ export default function Card({ serie }){
 
     return(
         <div className='card'>
-            <div className='card-image'>
-                <img src={imgUrl + serie.poster_path} alt=''></img>
-            </div>  
-            <div className='card-content'>
-                <h4>{serie.name}</h4>
-                <p>{dataLancamento}</p>
-                <div className='rate'>
-                    <span className='material-icons'>star_rate</span>
-                    {serie.vote_average}
+            <NavLink to={`/detalhes/${serie.id}`}>
+                <div className='card-image'>
+                    <img src={imgUrl + serie.poster_path} alt=''></img>
+                </div>  
+                <div className='card-content'>
+                    <h4>{serie.name}</h4>
+                    <p>{dataLancamento}</p>
+                    <div className='rate'>
+                        <span className='material-icons'>star_rate</span>
+                        {serie.vote_average}
+                    </div>
                 </div>
-            </div>
+            </NavLink>
         </div>
     )
 }
