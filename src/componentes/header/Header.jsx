@@ -1,10 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {withRouter} from 'react-router-dom'
 import './Header.css'
 
 function Header(props){
     
     const [search, setSearch] = useState('');
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            var mensagem = 'Busque por uma série ou filme';
+            if(window.innerWidth < 700)
+                mensagem = 'Pesquise';
+            document.querySelector('.input-header').placeholder = mensagem;
+        })
+    })
 
     function buscar(event){
         event.preventDefault()

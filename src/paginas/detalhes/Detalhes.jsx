@@ -9,6 +9,7 @@ export default function Detalhes(props){
     const { serieId }= props.match.params
     const baseImgUrl = 'https://image.tmdb.org/t/p/w300/'
     const baseBgImgUrl = 'https://image.tmdb.org/t/p/original/'
+    
     const [serie, setSerie] = useState([]);
     const [generos, setGeneros] = useState([]);
     const [temporadas, setTemporadas] = useState([]);
@@ -30,7 +31,7 @@ export default function Detalhes(props){
             <div className="serie-details">
                 <div className="bg" style={{backgroundImage: `url(${baseBgImgUrl}${serie.backdrop_path})`}}>
                 </div>
-                <button className='back-button' onClick={props.history.goBack}>
+                <button id='back-button' className='back-button' onClick={props.history.goBack}>
                     <span className="material-icons">navigate_before</span>
                     Voltar
                 </button>
@@ -49,7 +50,7 @@ export default function Detalhes(props){
             </div>
             <section className='temporadas'>
                 <h1>Temporadas</h1>
-                {temporadas.map((temporada) => <CardTemporada temporada={temporada}/>)}
+                {temporadas.map((temporada) => <CardTemporada temporada={temporada} key={temporada.id}/>)}
             </section>
         </Fragment>
     )
