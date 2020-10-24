@@ -5,7 +5,7 @@ import axios from 'axios'
 import Menu from '../../componentes/menu/Menu'
 import Card from '../../componentes/card/Card'
 
-export default function Avaliados(){
+export default function Avaliados(props){
     
     const [series, setSeries] = useState([]);
 
@@ -21,7 +21,7 @@ export default function Avaliados(){
     }
     return(
         <Fragment>
-            <Menu/>
+            <Menu history= {props.history}/>
             <div className='content'>
                 {series.map((serie) => 
                     <Card serie={serie} key={serie.id}/>

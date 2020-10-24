@@ -21,7 +21,7 @@ export default function Busca(props){
     }
     return(
         <Fragment>
-            <Menu/>
+            <Menu history= {props.history}/>
             <div className='content'>
                 {series.map((serie) => 
                     <Card serie={serie} key={serie.id}/>

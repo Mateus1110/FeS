@@ -50,7 +50,7 @@ export default function Detalhes(props){
             </div>
             <section className='temporadas'>
                 <h1>Temporadas</h1>
-                {temporadas.map((temporada) => <CardTemporada temporada={temporada} key={temporada.id}/>)}
+                {temporadas.map((temporada) => <CardTemporada temporada={temporada} key={temporada.id} categoria={true}/>)}
             </section>
         </Fragment>
     )

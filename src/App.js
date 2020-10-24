@@ -9,6 +9,7 @@ import Populares from './paginas/populares/Populares'
 import Avaliados from './paginas/avaliados/Avaliados'
 import Sobre from './paginas/sobre/Sobre'
 import Detalhes from './paginas/detalhes/Detalhes';
+import Categoria from './componentes/categoria/Categoria';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Lancamentos}/>
             <Route path='/lancamentos' component={Lancamentos}/>
+            <Route path='/categoria=:categoriaId' component={Categoria}/>
             <Route path='/busca' component={Busca}/>
             <Route path='/populares' component={Populares}/>
             <Route path='/avaliados' component={Avaliados}/>

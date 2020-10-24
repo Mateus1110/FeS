@@ -3,10 +3,10 @@ import './Sobre.css'
 
 import Menu from '../../componentes/menu/Menu'
 
-export default function Sobre(){
+export default function Sobre(props){
     return(
         <Fragment>
-            <Menu/>
+            <Menu history= {props.history}/>
             <div className='content-sobre'>
                 <h1>Sobre</h1>
                 <p>FeS é um site de filmes e séries onde você pode consultar o conteúdo pesquisando pelo nome do
