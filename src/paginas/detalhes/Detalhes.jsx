@@ -4,6 +4,7 @@ import './Detalhes.css'
 import api_options from '../../dados/api' 
 import axios from 'axios'
 import CardTemporada from '../../componentes/cardtemporada/CardTemporada'
+import Network from '../../componentes/cardnetwork/Network'
 
 export default function Detalhes(props){
     const { serieId }= props.match.params
@@ -13,6 +14,7 @@ export default function Detalhes(props){
     const [serie, setSerie] = useState([]);
     const [generos, setGeneros] = useState([]);
     const [temporadas, setTemporadas] = useState([]);
+    const [networks, setNetworks] = useState([]);
 
     useEffect(() => { load() }, [])
 
@@ -22,6 +24,7 @@ export default function Detalhes(props){
             setSerie(serie.data);
             setGeneros(serie.data.genres);
             setTemporadas(serie.data.seasons);
+            setNetworks(serie.data.networks);
         }catch(erro){
             console.log(erro);
         }
@@ -49,8 +52,17 @@ export default function Detalhes(props){
                 </div>
             </div>
             <section className='temporadas'>
-                <h1>Temporadas</h1>
-                {temporadas.map((temporada) => <CardTemporada temporada={temporada} key={temporada.id} categoria={true}/>)}
+                <h1 className='titulo-section'>Temporadas</h1>
+                {temporadas.map((temporada) => <CardTemporada temporada={temporada} key={temporada.id} categoria={true}/>
+                )}
+            </section>
+            <section className='networks'>
+                <h1 className='titulo-section'>Onde assistir:</h1>
+                <div className='network-content'>
+                    {networks.map((network) => 
+                        <Network network={network} key={network.id}></Network>
+                    )}
+                </div>
             </section>
         </Fragment>
     )

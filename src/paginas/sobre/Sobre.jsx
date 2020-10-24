@@ -11,7 +11,7 @@ export default function Sobre(props){
                 <h1>Sobre</h1>
                 <p>FeS é um site de filmes e séries onde você pode consultar o conteúdo pesquisando pelo nome do
                 filme na barra de pesquisa, ou pelas sessões do menu. As sessões do menu permitem filtrar os filmes e séries
-                mostrando os novos lançamentos, populares, e filmes melhor avalidados.
+                por categorias, melhores avaliados, novos lançamentos, e populares.
                 </p>
                 <p>OBS: Este site foi desenvolvido com o único intuito de ganhar experiência em HTML, CSS, JavaScript e React JS.</p>
             </div>

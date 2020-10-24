@@ -80,7 +80,7 @@
     justify-content: center;
 }
 
-.temporadas h1{
+.titulo-section{
     width: fit-content;
     margin: auto;
     font-family: var(--primary-font);
@@ -89,4 +89,18 @@
     margin-top: 2rem;
     color: var(--primary-color);
     text-align: center;
+}
+
+.networks {
+    display: block;
+    width: 100%;
+    height: 10rem;
+}
+
+.network-content{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }

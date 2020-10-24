@@ -27,6 +27,15 @@
     .card-temporada{
         font-size: .8rem;
     }
+
+    .network-content .network-item{
+        width: 5rem;
+        height: 50%;
+    }
+
+    .network-content .network-item h3{
+        font-size: .6rem;
+    }
 }
 
 @media (max-width: 650px){
@@ -82,6 +91,10 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .networks .network-content{
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 400px){
@@ -100,7 +113,7 @@
     .App .menu-area{
         justify-content: center;
     }
-    
+
     #search-button{
         width: 3.5rem;
         font-size: .8rem;
